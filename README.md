@@ -1,4 +1,4 @@
-# XYZ
+# XYZ - BIDAULT Axel
 
 <img src="docs/screenshots/home.png" alt="Page d'accueil" />
 
