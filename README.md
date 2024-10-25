@@ -1,4 +1,4 @@
-# XYZ - BIDAULT Axel
+# XYZ - BIDAULT Axel G8
 
 <img src="docs/screenshots/home.png" alt="Page d'accueil" />
 
