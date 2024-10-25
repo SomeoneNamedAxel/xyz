@@ -13,7 +13,7 @@ class WeekSeeder extends Seeder
      */
     public function __construct(
         protected WeekService $service
-    ) { 
+    ) {
         //
     }
 
@@ -31,6 +31,20 @@ class WeekSeeder extends Seeder
                 'week_ends_at' => $period->getEndDate()->format("Y-m-d H:i:s"),
             ]);
 
-        Week::insert($weeks->toArray());
+        foreach ($weeks as $week) {
+            Week::firstOrCreate(
+                [
+                    'year' => $week['year'],
+                    'week_number' => $week['week_number']
+                ],
+                [
+                    'week_starts_at' => $week['week_starts_at'],
+                    'week_ends_at' => $week['week_ends_at']
+                ]
+            );
+        }
+
+
+        //Week::insert($weeks->toArray());
     }
 }
